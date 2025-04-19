@@ -2,8 +2,8 @@ import React from "react";
 import HeroSection from "@/components/HeroSection";
 import MainDashboard from "@/components/MainDashboard";
 import KeyFindings from "@/components/KeyFindings";
+import ResearchMethodology from "@/components/ResearchMethodology";
 import PersonalLinks from "@/components/PersonalLinks";
-import OtherDashboards from "@/components/OtherDashboards";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="container px-4 md:px-6 py-12 space-y-12 w-full">
-        <div className="space-y-4">
+        <div className="space-y-4" id="dashboard">
           <h2
             className="text-3xl font-bold tracking-tight text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600"
             id="dashboard-title"
@@ -33,8 +33,8 @@ export default function Home() {
         {/* Key Findings Section */}
         <KeyFindings />
 
-        {/* Other Dashboards */}
-        <OtherDashboards />
+        {/* Research Methodology Section */}
+        <ResearchMethodology />
 
         {/* Personal Links */}
         <PersonalLinks />

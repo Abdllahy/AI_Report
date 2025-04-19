@@ -1,89 +1,107 @@
+"use client";
+
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Newspaper, BookText } from "lucide-react";
+import {
+  Github,
+  Newspaper,
+  BookText,
+  Mail,
+  Linkedin,
+  ExternalLink,
+  PenSquare,
+} from "lucide-react";
 
 interface PersonalLinksProps {
   mediumUrl?: string;
   substackUrl?: string;
   githubUrl?: string;
+  linkedinUrl?: string;
+  emailAddress?: string;
+  hashnodeUrl?: string;
 }
 
 const PersonalLinks = ({
   mediumUrl = "https://medium.com/@yourusername",
   substackUrl = "https://yourusername.substack.com",
   githubUrl = "https://github.com/yourusername",
+  linkedinUrl = "https://linkedin.com/in/yourusername",
+  emailAddress = "your.email@example.com",
+  hashnodeUrl = "https://hashnode.com/@yourusername",
 }: PersonalLinksProps) => {
+  const cards = [
+    {
+      icon: <BookText className="h-6 w-6" />,
+      title: "Medium Blog",
+      buttonText: "Visit My Blog",
+      url: mediumUrl,
+    },
+    {
+      icon: <Newspaper className="h-6 w-6" />,
+      title: "Substack Newsletter",
+      buttonText: "Subscribe",
+      url: substackUrl,
+    },
+    {
+      icon: <Github className="h-6 w-6" />,
+      title: "GitHub Profile",
+      buttonText: "View Projects",
+      url: githubUrl,
+    },
+    {
+      icon: <Linkedin className="h-6 w-6" />,
+      title: "LinkedIn Profile",
+      buttonText: "Connect",
+      url: linkedinUrl,
+    },
+    {
+      icon: <PenSquare className="h-6 w-6" />,
+      title: "Hashnode Blog",
+      buttonText: "Read Articles",
+      url: hashnodeUrl,
+    },
+    {
+      icon: <Mail className="h-6 w-6" />,
+      title: "Email Me",
+      buttonText: "Send Email",
+      url: `mailto:${emailAddress}`,
+    },
+  ];
+
   return (
-    <section className="w-full py-16 bg-gradient-to-b from-indigo-50 to-white">
+    <section
+      id="connect"
+      className="py-20 bg-gradient-to-b from-white to-indigo-50 text-center"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">
           Connect With Me
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-white hover:shadow-lg transition-shadow duration-300 border-none">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="h-16 w-16 rounded-full bg-indigo-100 flex items-center justify-center mb-4 mt-4">
-                <BookText className="h-8 w-8 text-indigo-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Medium Blog</h3>
-              <p className="text-muted-foreground mb-4">
-                Read my in-depth articles and analysis on AI trends and impacts.
-              </p>
-              <Button
-                asChild
-                className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-              >
-                <a href={mediumUrl} target="_blank" rel="noopener noreferrer">
-                  Visit My Blog
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+        <p className="text-gray-600 max-w-xl mx-auto mb-10">
+          Let's collaborate on AI research and data analysis projects.
+        </p>
 
-          <Card className="bg-white hover:shadow-lg transition-shadow duration-300 border-none">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="h-16 w-16 rounded-full bg-purple-100 flex items-center justify-center mb-4 mt-4">
-                <Newspaper className="h-8 w-8 text-purple-500" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {cards.map((card, index) => (
+            <a
+              key={index}
+              href={card.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 p-5 rounded-lg border border-gray-200 hover:border-violet-400 hover:bg-violet-50 transition duration-300"
+            >
+              <div className="text-gray-600 group-hover:text-violet-600 transition">
+                {card.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Substack Newsletter
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Subscribe to my newsletter for regular updates on AI research
-                and insights.
-              </p>
-              <Button
-                asChild
-                className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-              >
-                <a href={substackUrl} target="_blank" rel="noopener noreferrer">
-                  Subscribe
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white hover:shadow-lg transition-shadow duration-300 border-none">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="h-16 w-16 rounded-full bg-pink-100 flex items-center justify-center mb-4 mt-4">
-                <Github className="h-8 w-8 text-pink-500" />
+              <div className="text-left">
+                <h3 className="font-medium text-gray-800 group-hover:text-violet-600 transition">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-gray-500 flex items-center gap-1">
+                  {card.buttonText} <ExternalLink className="h-4 w-4" />
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">GitHub Profile</h3>
-              <p className="text-muted-foreground mb-4">
-                Explore my code repositories and technical projects related to
-                AI and data analysis.
-              </p>
-              <Button
-                asChild
-                className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-              >
-                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                  View Projects
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+            </a>
+          ))}
         </div>
       </div>
     </section>
