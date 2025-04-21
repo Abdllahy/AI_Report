@@ -23,10 +23,10 @@ interface PersonalLinksProps {
 const PersonalLinks = ({
   mediumUrl = "https://medium.com/@yourusername",
   substackUrl = "https://yourusername.substack.com",
-  githubUrl = "https://github.com/yourusername",
+  githubUrl = "https://github.com/Abdllahy",
   linkedinUrl = "https://linkedin.com/in/yourusername",
   emailAddress = "your.email@example.com",
-  hashnodeUrl = "https://hashnode.com/@yourusername",
+  hashnodeUrl = "https://abdullahybashir.hashnode.dev/",
 }: PersonalLinksProps) => {
   const cards = [
     {

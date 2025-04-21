@@ -63,7 +63,7 @@ const HeroSection = () => {
               asChild
             >
               <a
-                href="https://www.canva.com/design/your-report-id/view"
+                href="https://abdullahybashir.hashnode.dev/how-ai-is-reshaping-global-industries-a-data-driven-analysis"
                 target="_blank"
                 rel="noopener noreferrer"
               >
