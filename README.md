@@ -95,7 +95,7 @@ Explore the dashboards built using **Tableau Public**:
 
 A detailed report analyzing all findings, visuals, and SQL logic is available here:
 
-📘 [Read the Full Report on Canva](https://www.canva.com/design/DAGklz10xdM/8bF5IReOTrd5a9OcdYNmVQ/view?utm_content=DAGklz10xdM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc4d1a3eeb8)  
+📘 [Read the Full Report on Hashnode](https://abdullahybashir.hashnode.dev/how-ai-is-reshaping-global-industries-a-data-driven-analysis)  
 📩 [Subscribe to Insights on Substack](https://yourusername.substack.com)
 
 ## 🧾 Dataset
@@ -108,7 +108,7 @@ The dataset used in this project is publicly available on Kaggle:
 
 - 📰 [Medium Blog](https://medium.com/@yourmediumhandle)
 - 📩 [Substack Newsletter](https://yourusername.substack.com)
-- 💻 [GitHub Profile](https://github.com/yourgithubusername)
+- 💻 [GitHub Profile](https://github.com/Abdllahy)
 
 > **Built by Abdullahi Bashir** — A data science project showcasing the intersection of AI, industries, and global transformation.
 
